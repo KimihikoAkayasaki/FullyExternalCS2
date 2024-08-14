@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<Target Name="ILRepacker" AfterTargets="Build">
+		<ItemGroup>
+			<InputAssemblies Include="$(TargetPath)" />
+			<InputAssemblies Include="$(OutputPath)Figgle.dll" />
+			<InputAssemblies Include="$(OutputPath)GameOverlay.dll" />
+			<InputAssemblies Include="$(OutputPath)Newtonsoft.Json.dll" />
+			<InputAssemblies Include="$(OutputPath)SharpDX.Direct2D1.dll" />
+			<InputAssemblies Include="$(OutputPath)SharpDX.Direct3D9.dll" />
+			<InputAssemblies Include="$(OutputPath)SharpDX.dll" />
+			<InputAssemblies Include="$(OutputPath)SharpDX.DXGI.dll" />
+			<InputAssemblies Include="$(OutputPath)SharpDX.Mathematics.dll" />
+			<InputAssemblies Include="$(OutputPath)System.Buffers.dll" />
+			<InputAssemblies Include="$(OutputPath)System.Memory.dll" />
+			<InputAssemblies Include="$(OutputPath)System.Numerics.Vectors.dll" />
+			<InputAssemblies Include="$(OutputPath)System.Runtime.CompilerServices.Unsafe.dll" />
+			<InputAssemblies Include="$(OutputPath)System.ValueTuple.dll" />
+		</ItemGroup>
+
+		<ILRepack
+			AllowDuplicateResources="false"
+			DebugInfo="true"
+			Internalize="true"
+			InputAssemblies="@(InputAssemblies)"
+			OutputFile="$(TargetPath)"
+			Parallel="true"
+			TargetKind="SameAsPrimaryAssembly" />
+	</Target>
+</Project>

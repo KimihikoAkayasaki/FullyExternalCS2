@@ -1,19 +1,22 @@
 ## FullyExternalCS2
 
+### Changes
+
+- Updated offset links so they work again
+- Removed everything besides ESP+data
+- Color based on health, white for teammates
+- Bone scanner uses more """robust""" code
+- Moved to netfx, so it's 4MB instead of 180
+
 ### Description
 
 FullyExternalCS2 is an external cheat for Counter-Strike 2 **that does not write to the game memory**. \
 It was created for the _purpose_ of _improving_ Windows API skills. \
 [Please note that.](https://github.com/sweeperxz/FullyExternalCS2/issues/6#issuecomment-1919053959)
 
-![SS](assets/photo.png)
+![SS](https://github.com/user-attachments/assets/f7e47d74-76b1-4d2b-ad4a-e061aeb856dc)
 
 ### Features
-
-#### AimBot
-
-- Key activation with RCS (default = LBUTTON)
-- Visibility check
 
 #### Esp
 
@@ -29,57 +32,20 @@ It was created for the _purpose_ of _improving_ Windows API skills. \
 - Aim Crosshair
 - [Bomb timer](https://streamable.com/ylouzc)
 
-#### Trigger Bot
-
-- Key activation (default = LAlt)
-- [No Spread](https://streamable.com/9ltv4n)
-
 #### Miscellaneous
 
-- [BunnyHop](https://streamable.com/3r09m1) ( [Read this](https://github.com/sweeperxz/FullyExternalCS2/blob/151355b47373acdc3ccaa6f526e94388c4e71f2b/Data/Entity/Player.cs#L64) )
-- OBS Bypass
+- Affinity SS/OBS Bypass
 
 #### System
 
 - Auto update offsets
 
-### Getting started
+### Building
 
-**Dependencies**
-
-```cs
-    <ItemGroup>
-        <PackageReference Include="GameOverlay.Net" Version="4.3.1"/>
-        <PackageReference Include="Overlay.NET" Version="1.0.2"/>
-        <PackageReference Include="PresentationFramework" Version="4.6.0"/>
-        <PackageReference Include="SharpDX.Direct3D9" Version="4.2.0"/>
-        <PackageReference Include="SharpDX.DXGI" Version="4.2.0"/>
-    </ItemGroup>
-```
-
-**Installation**
-
-```bash
-git clone https://github.com/sweeperxz/FullyExternalCS2.git
-cd FullyExternalCS2
-```
-
-### Starting the program
-
-```bash
-dotnet build
-dotnet run
-```
+Clone and open the project in Visual Studio, build and run (then hope it works).  
+This version uses netfx 4.7.2, so there shouldn't be any additional setup needed.
 
 ### Help
 
-If you have issues or have questions, check out the Issues section of the GitHub project page.
-
-### Authors
-
-- sweeperxz - Developer/Engineer
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=sweeperxz/FullyExternalCS2&type=Date)](https://star-history.com/#sweeperxz/FullyExternalCS2&Date)
-
+If you have issues or have questions, ~~check out the Issues section of the GitHub project page~~  
+*leave me alone, I don't care and likely won't fix anything no matter how much you keep asking*.
